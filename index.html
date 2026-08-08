@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- =========================================================
+       GUIA RÁPIDO DE EDIÇÃO
+       1. FOTO: procure por "imagem.png" na seção HERO.
+       2. CURRÍCULO: procure por "curriculo.pdf" na seção HERO.
+       3. CONTATOS: procure por "CONTATOS" no final do BODY.
+       4. NOVOS PROJETOS: procure por "PROJETOS".
+       5. NOVOS CERTIFICADOS: procure por "CERTIFICADOS".
+       ========================================================= -->
+
+  <!-- EDITE AQUI: título que aparece na aba do navegador -->
+  <title>Elias Vila Flor — Portfólio Profissional</title>
+
+  <!-- Fontes do site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       CORES E CONFIGURAÇÕES GERAIS
+       Normalmente você não precisa mexer aqui.
+       ========================================================= */
+    :root {
+      --navy: #0F2C4C;
+      --navy-deep: #0A1F38;
+      --navy-soft: #274867;
+      --sage: #7FBEA0;
+      --sage-deep: #5DA482;
+      --paper: #FAF9F5;
+      --paper-dim: #F1EFE8;
+      --ink: #16202A;
+      --ink-soft: #52606D;
+      --line: #DEDBD1;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Public Sans', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--navy-deep);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 96px 8vw;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sage-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--sage-deep);
+      display: inline-block;
+    }
+
+    /* =========================================================
+       MENU
+       ========================================================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 249, 245, .88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      max-width: 1120px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 8vw;
+    }
+
+    .brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--navy-deep);
+    }
+
+    .brand span {
+      color: var(--sage-deep);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: .92rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink-soft);
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--navy-deep);
+    }
+
+    /* =========================================================
+       HERO / APRESENTAÇÃO
+       ========================================================= */
+    .hero {
+      padding: 110px 8vw 90px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -140px;
+      right: -140px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(127, 190, 160, .28), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 4.1rem);
+      line-height: 1.04;
+      margin: 18px 0 20px;
+    }
+
+    .hero .role {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .98rem;
+      color: var(--navy-soft);
+      margin-bottom: 22px;
+    }
+
+    .hero .lede {
+      font-size: 1.08rem;
+      color: var(--ink-soft);
+      max-width: 48ch;
+      margin-bottom: 34px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      font-weight: 600;
+      font-size: .92rem;
+      padding: 13px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      transition: .18s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: var(--navy-deep);
+      box-shadow: 0 6px 18px rgba(93, 164, 130, .28);
+    }
+
+    .btn-outline {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+
+    .btn-ghost {
+      color: var(--ink-soft);
+      border-color: var(--line);
+    }
+
+    /* =========================================================
+       FOTO
+       IMPORTANTE: coloque o arquivo imagem.png na mesma pasta
+       deste arquivo HTML.
+       ========================================================= */
+    .photo-slot {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 2px solid var(--sage-deep);
+      background: linear-gradient(160deg, var(--paper-dim), #fff);
+    }
+
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =========================================================
+       FAIXA DE DESTAQUES
+       ========================================================= */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-block: 1px solid var(--line);
+    }
+
+    .stats div {
+      background: var(--paper);
+      padding: 30px 18px;
+      text-align: center;
+    }
+
+    .stats .num {
+      font-family: 'Fraunces', serif;
+      font-size: 1.7rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .stats .lab {
+      font-size: .8rem;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    /* =========================================================
+       TÍTULOS DAS SEÇÕES
+       ========================================================= */
+    .s-head {
+      margin-bottom: 44px;
+      max-width: 60ch;
+    }
+
+    .s-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      margin-top: 10px;
+    }
+
+    /* =========================================================
+       SOBRE MIM
+       ========================================================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+    }
+
+    .about-grid p {
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+    }
+
+    .about-grid strong {
+      color: var(--ink);
+    }
+
+    /* =========================================================
+       HABILIDADES
+       ========================================================= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      transition: .2s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--sage-deep);
+      transform: translateY(-4px);
+    }
+
+    .skill-card .tag,
+    .proj-body .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .68rem;
+      letter-spacing: .08em;
+      color: var(--sage-deep);
+      text-transform: uppercase;
+    }
+
+    .skill-card h3 {
+      font-size: 1.15rem;
+      margin: 8px 0 14px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .skill-card li {
+      font-size: .92rem;
+      color: var(--ink-soft);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .skill-card li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--sage-deep);
+    }
+
+    /* =========================================================
+       EXPERIÊNCIA
+       ========================================================= */
+    .timeline {
+      border-left: 2px solid var(--line);
+      padding-left: 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-left: 6px;
+    }
+
+    .tl-item {
+      position: relative;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--sage);
+      border: 3px solid var(--paper);
+      outline: 2px solid var(--sage-deep);
+    }
+
+    .tl-item .when {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .76rem;
+      color: var(--ink-soft);
+    }
+
+    .tl-item h3 {
+      font-size: 1.2rem;
+      margin: 6px 0;
+    }
+
+    .tl-item p {
+      color: var(--ink-soft);
+      max-width: 65ch;
+    }
+
+    /* =========================================================
+       PROJETOS
+       ========================================================= */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .proj-card {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-thumb {
+      height: 150px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-soft) 60%, var(--sage-deep) 130%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .proj-body {
+      padding: 22px;
+    }
+
+    .proj-body h3 {
+      font-size: 1.12rem;
+      margin: 8px 0 10px;
+    }
+
+    .proj-body p {
+      font-size: .92rem;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stack span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .68rem;
+      color: var(--navy);
+      background: var(--paper-dim);
+      border-radius: 100px;
+      padding: 4px 10px;
+    }
+
+    /* =========================================================
+       CERTIFICADOS
+       ========================================================= */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cert-card {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 130px;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: .9rem;
+    }
+
+    .cert-card.filled {
+      border-style: solid;
+      background: #fff;
+    }
+
+    .cert-card h3 {
+      font-family: 'Public Sans';
+      font-size: 1rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .cert-card .inst {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .74rem;
+      color: var(--sage-deep);
+    }
+
+    /* =========================================================
+       CONTATO
+       ========================================================= */
+    .contact {
+      background: var(--navy-deep);
+      color: var(--paper);
+      border-radius: 24px;
+      padding: 64px 8vw;
+      margin: 0 8vw 96px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact p {
+      color: #C7D2DD;
+      max-width: 50ch;
+      margin: 14px auto 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .contact-links a {
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 100px;
+      padding: 11px 22px;
+      text-decoration: none;
+      color: #fff;
+      font-size: .9rem;
+    }
+
+    .contact-links a:hover {
+      background: var(--sage);
+      border-color: var(--sage);
+      color: var(--navy-deep);
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 8vw 48px;
+      color: var(--ink-soft);
+      font-size: .82rem;
+    }
+
+    /* =========================================================
+       ANIMAÇÕES
+       ========================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s, transform .6s;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =========================================================
+       RESPONSIVIDADE
+       ========================================================= */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proj-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        max-height: 320px;
+      }
+
+      .nav-links li {
+        padding: 14px 8vw;
+        border-top: 1px solid var(--line);
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      section {
+        padding: 64px 6vw;
+      }
+
+      .contact {
+        margin: 0 6vw 64px;
+        padding: 48px 6vw;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       MENU PRINCIPAL
+       ========================================================= -->
+  <header>
+    <nav>
+      <div class="brand">Elias <span>Vila Flor</span></div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#certificados">Certificados</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       HERO / APRESENTAÇÃO
+       ========================================================= -->
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Portfólio profissional</p>
+
+      <h1>Elias Vila Flor</h1>
+
+      <p class="role">
+        Estudante de Administração · Marketing Digital · Tecnologia · IA
+      </p>
+
+      <p class="lede">
+        Estudante de Administração interessado em Marketing Digital, Recursos Humanos,
+        tecnologia e outras áreas administrativas, unindo conhecimentos de gestão,
+        criatividade e ferramentas digitais.
+      </p>
+
+      <div class="cta-row">
+        <!-- EDITE AQUI: mantenha curriculo.pdf com esse nome ou altere para o nome do seu PDF -->
+        <a href="curriculo.pdf" class="btn btn-primary" download>
+          Baixar currículo
+        </a>
+
+        <a href="#projetos" class="btn btn-outline">
+          Ver projetos
+        </a>
+
+        <a href="#contato" class="btn btn-ghost">
+          Entrar em contato →
+        </a>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         FOTO — EDITE AQUI
+         Coloque imagem.png na MESMA PASTA deste arquivo HTML.
+         ======================================================= -->
+    <div class="photo-slot">
+      <img src="imagem.png" alt="Foto de Elias Vila Flor">
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DESTAQUES
+       ========================================================= -->
+  <div class="stats reveal">
+    <div>
+      <div class="num">🎓</div>
+      <div class="lab">Administração em andamento</div>
+    </div>
+
+    <div>
+      <div class="num">💼</div>
+      <div class="lab">Experiência em Marketing Digital</div>
+    </div>
+
+    <div>
+      <div class="num">🤖</div>
+      <div class="lab">IA aplicada a projetos e conteúdos</div>
+    </div>
+
+    <div>
+      <div class="num">💻</div>
+      <div class="lab">Aprendizado autodidata em tecnologia</div>
+    </div>
+
+    <div>
+      <div class="num">📚</div>
+      <div class="lab">Projetos acadêmicos e pessoais</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SOBRE MIM
+       ========================================================= -->
+  <section id="sobre">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Administração, criatividade e tecnologia</h2>
+      </div>
+
+      <div class="about-grid">
+        <p>
+          Sou estudante de <strong>Bacharelado em Administração no IF Baiano,
+          Campus Alagoinhas</strong>, com graduação em andamento desde 2025.
+          Tenho interesse profissional em Marketing Digital, Recursos Humanos,
+          tecnologia, atendimento e funções administrativas.
+        </p>
+
+        <p>
+          Durante meu estágio na <strong>Legaliza – Estágios & Empregos</strong>,
+          atuei com <strong>atendimento remoto aos clientes</strong> e com
+          <strong>propagandas digitais</strong>, criando posts, cards e vídeos
+          utilizando ferramentas de Inteligência Artificial.
+        </p>
+
+        <p>
+          Sou <strong>autodidata em tecnologia e ferramentas digitais</strong>.
+          Gosto de aprender por meio de tutoriais, testar novas ferramentas e
+          transformar o conhecimento adquirido em projetos e conteúdos.
+        </p>
+
+        <p>
+          Busco oportunidades nas quais eu possa aplicar meus conhecimentos de
+          Administração, criatividade e tecnologia, contribuindo com a equipe e
+          continuando meu desenvolvimento profissional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       HABILIDADES
+       ========================================================= -->
+  <section id="habilidades">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="eyebrow">Habilidades</p>
+        <h2>O que eu levo para um time</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="tag">Administração</p>
+          <h3>Gestão & Organização</h3>
+          <ul>
+            <li>Organização</li>
+            <li>Atendimento ao cliente</li>
+            <li>Comunicação</li>
+            <li>Rotinas administrativas</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="tag">Marketing</p>
+          <h3>Comunicação Digital</h3>
+          <ul>
+            <li>Marketing Digital</li>
+            <li>Canva e Design Digital</li>
+            <li>Criação de posts e cards</li>
+            <li>Edição e criação de vídeos</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="tag">Tecnologia</p>
+          <h3>Desenvolvimento</h3>
+          <ul>
+            <li>HTML e CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub Pages</li>
+            <li>Projetos web autodidatas</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="tag">Inteligência Artificial</p>
+          <h3>IA Aplicada</h3>
+          <ul>
+            <li>Criação de textos e ideias</li>
+            <li>Geração e edição de imagens</li>
+            <li>Criação e edição de vídeos</li>
+            <li>Pesquisa e produtividade com IA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EXPERIÊNCIA
+       ========================================================= -->
+  <section id="experiencia">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="eyebrow">Experiência</p>
+        <h2>Trajetória profissional</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <p class="when">19/01/2026 — 10/07/2026</p>
+          <h3>Estagiário — Legaliza (Estágios & Empregos)</h3>
+          <p>
+            Atuação com <strong>atendimento remoto aos clientes</strong> e
+            <strong>propagandas digitais</strong>, incluindo criação de posts,
+            cards e vídeos utilizando ferramentas de Inteligência Artificial.
+          </p>
+        </div>
+
+        <div class="tl-item">
+          <p class="when">2025 — Em andamento</p>
+          <h3>Bacharelado em Administração — IF Baiano, Campus Alagoinhas</h3>
+          <p>
+            Graduação em andamento, desenvolvendo conhecimentos em diferentes
+            áreas da Administração e formação para atuação em organizações.
+          </p>
+        </div>
+
+        <!-- EDITE AQUI: novas experiências podem ser adicionadas acima desta linha. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJETOS
+       IMPORTANTE: coloque aqui somente projetos públicos.
+       Não coloque projetos confidenciais ou que serão apresentados
+       futuramente em TCC.
+       ========================================================= -->
+  <section id="projetos">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="eyebrow">Projetos</p>
+        <h2>O que já desenvolvi e estudei</h2>
+      </div>
+
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-thumb">🛍️</div>
+          <div class="proj-body">
+            <p class="tag">Marketing · Design · IA</p>
+            <h3>Conteúdos para Jady Cosméticos</h3>
+            <p>
+              Criação de materiais visuais e conteúdos digitais para divulgação
+              de produtos, utilizando ferramentas de design e Inteligência Artificial.
+            </p>
+            <div class="stack">
+              <span>Canva</span>
+              <span>IA generativa</span>
+              <span>Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb">📊</div>
+          <div class="proj-body">
+            <p class="tag">Projeto acadêmico · PCE I</p>
+            <h3>Estudo sobre Marketing e Cassinos Online</h3>
+            <p>
+              Estudo <strong>teórico</strong> desenvolvido no âmbito da disciplina
+              de Práticas Curriculares de Extensão I (PCE I), abordando o impacto
+              do marketing relacionado aos cassinos online.
+            </p>
+            <div class="stack">
+              <span>Pesquisa</span>
+              <span>PCE I</span>
+              <span>Estudo teórico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb">🎮</div>
+          <div class="proj-body">
+            <p class="tag">Desenvolvimento · Projeto pessoal</p>
+            <h3>Pino: A Saga dos Cristais</h3>
+            <p>
+              Projeto de aprendizado em desenvolvimento web, utilizando programação
+              e recursos de front-end para criação de um jogo.
+            </p>
+            <div class="stack">
+              <span>HTML5</span>
+              <span>JavaScript</span>
+              <span>GitHub Pages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDITE AQUI: copie um bloco .proj-card para adicionar novos projetos públicos. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CERTIFICADOS
+       ========================================================= -->
+  <section id="certificados">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="eyebrow">Certificados</p>
+        <h2>Formação complementar</h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card filled">
+          <h3>Gestão de Pessoas no Setor Privado</h3>
+          <span class="inst">UNIVESP — Universidade Virtual do Estado de São Paulo</span>
+          <span>Carga horária: 6h56</span>
+          <span>Concluído em: 24/01/2026</span>
+        </div>
+
+        <!-- EDITE AQUI: copie o bloco acima quando concluir outro curso. -->
+        <div class="cert-card">
+          <span>+ Próximo certificado</span>
+          <span style="font-size: .78rem">Adicione quando concluir um novo curso.</span>
+        </div>
+
+        <div class="cert-card">
+          <span>+ Próximo certificado</span>
+          <span style="font-size: .78rem">Adicione quando concluir um novo curso.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTATOS
+       Aqui estão os links que precisam ser reais.
+       E-mail, WhatsApp e Instagram já estão configurados.
+       O GitHub pode ser adicionado quando você quiser.
+       ========================================================= -->
+  <div class="wrap">
+    <div class="contact" id="contato">
+      <p class="eyebrow" style="justify-content: center; color: var(--sage);">Contato</p>
+
+      <h2>Vamos conversar?</h2>
+
+      <p>
+        Estou aberto a oportunidades de estágio nas áreas de Administração,
+        Marketing Digital, Recursos Humanos, tecnologia, atendimento e funções
+        administrativas compatíveis com meu perfil.
+      </p>
+
+      <div class="contact-links">
+
+        <!-- E-MAIL: já está funcionando -->
+        <a href="mailto:elias.vilaflor@gmail.com">
+          ✉ E-mail
+        </a>
+
+        <!-- WHATSAPP: já está funcionando -->
+        <a href="https://wa.me/5575981404093" target="_blank" rel="noopener noreferrer">
+          📱 WhatsApp
+        </a>
+
+        <!-- GITHUB: EDITE AQUI
+             Exemplo:
+             https://github.com/seuusuario
+        -->
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          🐙 GitHub
+        </a>
+
+        <!-- INSTAGRAM: já está funcionando -->
+        <a href="https://instagram.com/elias_v.f.m" target="_blank" rel="noopener noreferrer">
+          📸 Instagram
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       RODAPÉ
+       ========================================================= -->
+  <footer>
+    © 2026 Elias Vila Flor. Todos os direitos reservados.
+  </footer>
+
+  <!-- =========================================================
+       JAVASCRIPT
+       Normalmente você não precisa editar esta parte.
+       ========================================================= -->
+  <script>
+    // MENU MOBILE
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+      });
+    });
+
+    // ANIMAÇÃO AO ROLAR A PÁGINA
+    const revealEls = document.querySelectorAll('section, .stats');
+
+    revealEls.forEach(el => el.classList.add('reveal'));
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    revealEls.forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
