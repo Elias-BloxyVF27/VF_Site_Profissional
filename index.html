@@ -465,6 +465,25 @@
       padding: 4px 10px;
     }
 
+    .proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: .88rem;
+      color: var(--navy-deep);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--sage);
+      padding-bottom: 2px;
+      transition: color .18s, border-color .18s;
+    }
+
+    .proj-link:hover {
+      color: var(--sage-deep);
+      border-color: var(--sage-deep);
+    }
+
     /* =========================================================
        CERTIFICADOS
        ========================================================= */
@@ -698,6 +717,7 @@
       </p>
 
       <div class="cta-row">
+        <!-- GUIA: troque "curriculo.pdf" pelo caminho real do seu arquivo de currículo em PDF -->
         <a href="curriculo.pdf" class="btn btn-primary" download>
           Baixar currículo
         </a>
@@ -712,7 +732,7 @@
       </div>
     </div>
 
-    
+    <!-- GUIA: troque "imagem.png" pelo caminho real da sua foto (ideal: retrato vertical, proporção 4:5) -->
     <div class="photo-slot">
       <img src="imagem.png" alt="Foto de Elias Vila Flor">
     </div>
@@ -907,6 +927,43 @@
         </div>
 
         <div class="proj-card">
+          <div class="proj-thumb">🌐</div>
+          <div class="proj-body">
+            <p class="tag">Desenvolvimento web</p>
+            <h3>Site da Jady Cosméticos</h3>
+            <p>
+              Desenvolvimento do site institucional da Jady Cosméticos, com
+              apresentação da loja, catálogo de marcas revendidas e canais de
+              contato integrados (WhatsApp, Instagram e lojas digitais).
+            </p>
+            <div class="stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>GitHub Pages</span>
+            </div>
+            <a href="https://elias-bloxyvf27.github.io/JADY-COSMETICOS/" target="_blank" rel="noopener noreferrer" class="proj-link">Visitar site →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb">🌐</div>
+          <div class="proj-body">
+            <p class="tag">Desenvolvimento web</p>
+            <h3>Site da Legaliza</h3>
+            <p>
+              Desenvolvimento do site institucional da Legaliza — Estágios &amp; Empregos,
+              estruturando páginas e apresentação da empresa para o público.
+            </p>
+            <div class="stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>GitHub Pages</span>
+            </div>
+            <a href="https://legaliza.netlify.app/" target="_blank" rel="noopener noreferrer" class="proj-link">Visitar site →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
           <div class="proj-thumb">📊</div>
           <div class="proj-body">
             <p class="tag">Projeto acadêmico · PCE I</p>
@@ -938,6 +995,7 @@
               <span>JavaScript</span>
               <span>GitHub Pages</span>
             </div>
+            <a href="https://elias-bloxyvf27.github.io/Pino-A-Saga-dos-Cristais/" target="_blank" rel="noopener noreferrer" class="proj-link">Jogar →</a>
           </div>
         </div>
 
@@ -963,11 +1021,13 @@
           <span>Concluído em: 24/01/2026</span>
         </div>
 
+        <!-- GUIA: substitua este bloco por um novo cert-card.filled quando tiver o próximo certificado -->
         <div class="cert-card">
           <span>+ Próximo certificado</span>
           <span style="font-size: .78rem">Em breve.</span>
         </div>
 
+        <!-- GUIA: substitua este bloco por um novo cert-card.filled quando tiver o próximo certificado -->
         <div class="cert-card">
           <span>+ Próximo certificado</span>
           <span style="font-size: .78rem">Em breve.</span>
@@ -1001,7 +1061,7 @@
           📱 WhatsApp
         </a>
 
-        
+        <!-- GITHUB: já está funcionando -->
         <a href="https://github.com/Elias-BloxyVF27" target="_blank" rel="noopener noreferrer">
           🐙 GitHub
         </a>
